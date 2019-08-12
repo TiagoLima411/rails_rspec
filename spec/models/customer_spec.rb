@@ -9,8 +9,13 @@ RSpec.describe Customer, type: :model do
     #expect(customer.full_name).to eq("Sr. Tiago Lima")
   #end
 
+  it '#full_name - Sobreescrevendo Atributo!' do
+    customer = create(:customer, name: "Tiago de Lima")
+    expect(customer.full_name).to eq("Sr. Tiago de Lima")
+  end
+
   it '#full_name' do
-    customer = create(:customer)
+    customer = create(:user) #ou create(:customer)
     expect(customer.full_name).to start_with("Sr. ")
   end
 
