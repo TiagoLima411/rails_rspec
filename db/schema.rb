@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 20190808144950) do
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "email"
+    t.boolean "vip"
+    t.integer "days_to_pay"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
