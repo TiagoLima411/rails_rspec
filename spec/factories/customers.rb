@@ -6,8 +6,9 @@ FactoryBot.define do
         end
 
         name {Faker::Name.name}
+        address {Faker::Address.street_address}        
+        
         #email {Faker::Internet.email}
-
         sequence(:email) { |n| "meu_email~#{n}@email.com" }
 
         trait :male do
@@ -35,6 +36,7 @@ FactoryBot.define do
         end
 
         factory :customer_with_orders, traits: [:with_orders]
+        factory :customer_male, traits: [:male]
         factory :customer_female, traits: [:female]
         factory :customer_vip, traits: [:vip]
         factory :customer_default, traits: [:default]
