@@ -32,6 +32,14 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
 
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      # Choose a test framework
+      with.test_framework :rspec      
+      with.library :rails
+    end
+  end
+
   #Timer Helper
   config.include ActiveSupport::Testing::TimeHelpers
 
