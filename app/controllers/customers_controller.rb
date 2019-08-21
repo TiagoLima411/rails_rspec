@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+  before_action :authenticate_member!, except: %i[index]
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
 
   # GET /customers
