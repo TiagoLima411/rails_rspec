@@ -46,7 +46,8 @@ group :development, :test do
   gem 'shoulda-matchers', '~>3.1'
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem 'webdrivers'
+  #gem 'chromedriver-helper'
   gem 'rspec-json_expectations'
 end
 
